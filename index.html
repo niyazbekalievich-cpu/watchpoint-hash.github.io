@@ -10,10 +10,10 @@
   <meta name="keywords" content="видеонаблюдение ташкент, монтаж камер, установка скуд, пожарная сигнализация, Hikvision, Tiandy, WatchPoint">
   <meta name="robots" content="index, follow">
   
-  <!-- Главная ссылка для Google (чтобы он знал, что это главный сайт) -->
+  <!-- Главная ссылка для Google -->
   <link rel="canonical" href="https://watchpoint.uz/">
 
-  <!-- Open Graph (для красивых ссылок в Telegram и WhatsApp) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="WatchPoint Security — Системы безопасности в Ташкенте">
   <meta property="og:description" content="Профессиональный монтаж видеонаблюдения и СКУД под ключ. Гарантия качества.">
   <meta property="og:type" content="website">
@@ -63,7 +63,6 @@
       min-height:85vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; color:#fff; position:relative; overflow:hidden;
-      /* Добавлено затемнение картинки, чтобы текст читался лучше */
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("bg.jpg") center/cover no-repeat;
       padding: 20px;
     }
@@ -98,6 +97,31 @@
     .card.show{opacity:1; transform:none; transition:all .6s ease;}
     .card:hover{transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,.4); background:#1e2330; border-color: var(--brand);}
     .card h3{margin:10px 0; color: var(--brand);}
+
+    /* REVIEWS STYLES (НОВОЕ) */
+    .reviews-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;
+    }
+    .review-card {
+      width: 300px; background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; 
+      padding: 25px; text-align: left; position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 14px rgba(0,0,0,.25);
+    }
+    .review-card:hover {
+      transform: translateY(-5px);
+      background: #1e2330;
+      border-color: var(--brand);
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    }
+    .stars { color: #FFD700; margin-bottom: 15px; font-size: 1.1rem; letter-spacing: 2px; }
+    .review-text { 
+      font-style: italic; color: #ddd; font-size: 0.95rem; line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .review-author strong { display: block; color: #fff; font-size: 1.05rem; }
+    .review-author span { display: block; color: var(--brand); font-size: 0.85rem; margin-top: 4px; }
     
     /* BUTTONS */
     .btn{
@@ -112,7 +136,7 @@
     footer{padding:30px; text-align:center; background:#05070a; color: #777; font-size: 0.9rem;}
 
     /* Anchor Offset */
-    #about, #services, #contacts { scroll-margin-top: 80px; }
+    #about, #services, #contacts, #reviews { scroll-margin-top: 80px; }
 
     /* Button To Top */
     #toTop{
@@ -136,6 +160,7 @@
   <nav>
     <a href="#about">О нас</a>
     <a href="#services">Услуги</a>
+    <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
@@ -188,8 +213,56 @@
     </div>
   </section>
 
+  <!-- REVIEWS (НОВЫЙ БЛОК) -->
+  <section id="reviews" class="reveal">
+    <h2>⭐ Отзывы клиентов</h2>
+    <p>Нам доверяют безопасность своего бизнеса и дома.</p>
+    
+    <div class="reviews-grid">
+      <!-- Отзыв 1 -->
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">
+          "Заказывали установку 16 камер для склада на Сергели. Ребята сделали все за 2 дня. Кабели уложили в лотки очень аккуратно, настроили удаленный доступ на телефон директора. Рекомендую!"
+        </p>
+        <div class="review-author">
+          <strong>Алишер У.</strong>
+          <span>Владелец логистического центра</span>
+        </div>
+      </div>
+
+      <!-- Отзыв 2 -->
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">
+          "Нужно было срочно поставить СКУД (турникет) в офис. WatchPoint предложили лучшую цену и оборудование Hikvision. Работают по перечислению, с документами порядок."
+        </p>
+        <div class="review-author">
+          <strong>ООО "Texno Stroy"</strong>
+          <span>Менеджер по закупкам</span>
+        </div>
+      </div>
+
+      <!-- Отзыв 3 -->
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">
+          "Установили пожарную сигнализацию и домофон в частном доме. Понравилось, что инженер приехал, все замерил и объяснил, где лучше ставить датчики. Все работает отлично."
+        </p>
+        <div class="review-author">
+          <strong>Джамшид Ака</strong>
+          <span>Частный заказчик, Ташкент</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Кнопка оставить отзыв -->
+    <br><br>
+    <a href="https://t.me/watchpoint24" class="btn" style="background: transparent; border: 2px solid var(--brand);">✍️ Оставить отзыв в Telegram</a>
+  </section>
+
   <!-- CONTACTS -->
-  <section id="contacts" class="reveal">
+  <section id="contacts" class="reveal" style="background:#0e1118;">
     <h2>📞 Свяжитесь с нами</h2>
     <p>📍 Ташкент, Узбекистан. Выезд по всей Республике.</p>
     <p>Работаем как с частными лицами, так и с организациями (перечисление).</p>
@@ -218,7 +291,7 @@
 
   <script>
     // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card');
+    const reveals = document.querySelectorAll('.reveal, .card, .review-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -236,7 +309,7 @@
       entries.forEach(e=>{
         if(e.isIntersecting){
           links.forEach(a=>a.classList.remove('active'));
-          // Если мы в хедере - ничего не подсвечиваем или можно первую
+          // Если мы в хедере - ничего не подсвечиваем
           if (e.target.id !== 'home') {
              const id = '#' + e.target.id;
              const link = document.querySelector(`nav a[href="${id}"]`);
@@ -257,6 +330,7 @@
   </script>
 </body>
 </html>
+
 
 
 
