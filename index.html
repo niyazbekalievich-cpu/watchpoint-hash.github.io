@@ -6,8 +6,8 @@
 
   <!-- SEO -->
   <title>Монтаж видеонаблюдения и СКУД в Ташкенте | WatchPoint.uz</title>
-  <meta name="description" content="Профессиональный монтаж и обслуживание видеонаблюдения, пожарной сигнализации и СКУД в Ташкенте. Проектирование, гарантия, любая форма оплаты.">
-  <meta name="keywords" content="видеонаблюдение ташкент, монтаж камер, установка скуд, пожарная сигнализация, Hikvision, Tiandy, WatchPoint">
+  <meta name="description" content="Профессиональный монтаж и обслуживание видеонаблюдения, пожарной сигнализации и СКУД в Ташкенте. Оборудование Hikvision, Tiandy, UNV. Проектирование, гарантия.">
+  <meta name="keywords" content="видеонаблюдение ташкент, монтаж камер, установка скуд, пожарная сигнализация, Hikvision, Tiandy, UNV, WatchPoint">
   <meta name="robots" content="index, follow">
   
   <!-- Главная ссылка для Google -->
@@ -98,7 +98,7 @@
     .card:hover{transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,.4); background:#1e2330; border-color: var(--brand);}
     .card h3{margin:10px 0; color: var(--brand);}
 
-    /* REVIEWS STYLES (НОВОЕ) */
+    /* REVIEWS STYLES */
     .reviews-grid {
       display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;
     }
@@ -178,7 +178,7 @@
     <h2>🔎 О компании</h2>
     <p>
       <strong>WatchPoint Security</strong> — ваш надежный партнер в сфере безопасности. Мы специализируемся на проектировании, монтаже и обслуживании слаботочных систем любой сложности.<br><br>
-      Мы работаем с оборудованием мировых брендов (Hikvision, Tiandy, Pelco) и гарантируем качество каждого соединения. Наша цель — обеспечить полный контроль и безопасность вашего бизнеса и дома.
+      Мы работаем с оборудованием мировых брендов (Hikvision, Tiandy, <strong>UNV</strong>) и гарантируем качество каждого соединения. Наша цель — обеспечить полный контроль и безопасность вашего бизнеса и дома.
     </p>
   </section>
 
@@ -213,13 +213,12 @@
     </div>
   </section>
 
-  <!-- REVIEWS (НОВЫЙ БЛОК) -->
+  <!-- REVIEWS -->
   <section id="reviews" class="reveal">
     <h2>⭐ Отзывы клиентов</h2>
     <p>Нам доверяют безопасность своего бизнеса и дома.</p>
     
     <div class="reviews-grid">
-      <!-- Отзыв 1 -->
       <div class="review-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p class="review-text">
@@ -231,7 +230,6 @@
         </div>
       </div>
 
-      <!-- Отзыв 2 -->
       <div class="review-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p class="review-text">
@@ -243,7 +241,6 @@
         </div>
       </div>
 
-      <!-- Отзыв 3 -->
       <div class="review-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p class="review-text">
@@ -256,9 +253,8 @@
       </div>
     </div>
     
-    <!-- Кнопка оставить отзыв -->
     <br><br>
-    <a href="https://t.me/watchpointcctv24" class="btn" style="background: transparent; border: 2px solid var(--brand);">✍️ Оставить отзыв в Telegram</a>
+    <a href="https://t.me/watchpoint24" class="btn" style="background: transparent; border: 2px solid var(--brand);">✍️ Оставить отзыв в Telegram</a>
   </section>
 
   <!-- CONTACTS -->
@@ -271,7 +267,7 @@
     <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
       <a href="tel:+998886362545" class="btn">📞 +998 (88) 636-25-45</a>
       
-      <a href="https://t.me/watchpointcctv24" class="btn" style="background: #229ED9;">💬 Написать в Telegram</a>
+      <a href="https://t.me/watchpoint24" class="btn" style="background: #229ED9;">💬 Написать в Telegram</a>
 
       <a 
         class="btn" style="background: #ea4335;"
@@ -309,7 +305,6 @@
       entries.forEach(e=>{
         if(e.isIntersecting){
           links.forEach(a=>a.classList.remove('active'));
-          // Если мы в хедере - ничего не подсвечиваем
           if (e.target.id !== 'home') {
              const id = '#' + e.target.id;
              const link = document.querySelector(`nav a[href="${id}"]`);
@@ -330,6 +325,7 @@
   </script>
 </body>
 </html>
+
 
 
 
