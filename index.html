@@ -49,7 +49,7 @@
       display:flex; align-items:center; justify-content:center; gap:15px;
       z-index:1000;
       border-bottom: 1px solid rgba(255,255,255,0.1);
-      overflow-x: auto; /* Чтобы на телефонах можно было свайпать меню */
+      overflow-x: auto; /* Скролл на мобильных */
       white-space: nowrap;
     }
     nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:.3s; font-size: 1rem; padding: 0 5px;}
@@ -87,10 +87,10 @@
     section h2{font-size:2.2rem; margin:0 0 20px; color: var(--active);}
     section p{max-width:880px; margin:0 auto 28px; line-height:1.65; font-size:1.1rem}
 
-    /* GENERAL GRID */
+    /* GENERAL GRID (Услуги, Цены, Товары) */
     .services, .price-container, .products-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:25px}
     
-    /* CARDS */
+    /* CARDS COMMON STYLES */
     .card, .price-card, .product-card {
       background:var(--panel); border-radius:16px; 
       text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
@@ -113,28 +113,28 @@
     .card { width: 280px; padding: 25px; }
     .card h3{margin:10px 0; color: var(--brand);}
 
-    /* PRODUCT CARD STYLES (НОВОЕ) */
+    /* PRODUCT CARD STYLES */
     .product-section-title {
         width: 100%; text-align: center; margin-top: 40px; margin-bottom: 20px;
         color: #fff; font-size: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 10px;
     }
     .product-card {
-        width: 250px; padding: 15px; display: flex; flex-direction: column; align-items: center; text-align: center;
+        width: 260px; padding: 15px; display: flex; flex-direction: column; align-items: center; text-align: center;
     }
     .product-img-placeholder {
         width: 100%; height: 160px; background: #222; border-radius: 8px;
         display: flex; align-items: center; justify-content: center; margin-bottom: 15px;
         color: #555; font-size: 0.9rem;
     }
-    /* Если загрузишь картинки, используй этот класс */
+    /* Если загрузишь картинки, класс .product-img будет их масштабировать */
     .product-img {
-        width: 100%; height: 160px; object-fit: contain; margin-bottom: 15px;
+        width: 100%; height: 160px; object-fit: contain; margin-bottom: 15px; background: #fff; border-radius: 8px;
     }
     .product-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; color: #fff;}
-    .product-desc { font-size: 0.9rem; color: #aaa; margin-bottom: 15px; }
-    .product-price { color: var(--active); font-weight: bold; margin-bottom: 15px; }
+    .product-desc { font-size: 0.85rem; color: #aaa; margin-bottom: 10px; height: 60px; overflow: hidden; }
+    .product-price { color: var(--active); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
 
-    /* PRICE CARD */
+    /* PRICE CARD STYLES */
     .price-card { width: 320px; display: flex; flex-direction: column; }
     .price-header {
       background: linear-gradient(135deg, var(--brand), #0056b3);
@@ -151,9 +151,9 @@
     .price-list li strong { color: var(--active); font-size: 1rem; text-align: right;}
     
     .btn-small {
-      display: block; text-align: center; padding: 12px; margin: 20px;
+      display: block; text-align: center; padding: 10px; margin: 10px auto; width: 90%;
       background: rgba(255,255,255,0.1); color: #fff; text-decoration: none;
-      border-radius: 8px; transition: .3s; font-weight: 600;
+      border-radius: 8px; transition: .3s; font-weight: 600; font-size: 0.95rem;
     }
     .btn-small:hover { background: var(--active); color: #000; }
 
@@ -272,74 +272,118 @@
     </div>
   </section>
 
-  <!-- PRODUCTS (ОБОРУДОВАНИЕ) -->
+  <!-- PRODUCTS (ОБОРУДОВАНИЕ - НОВЫЙ БЛОК) -->
   <section id="products" class="reveal">
-    <h2>📦 Оборудование</h2>
-    <p>Поставляем и устанавливаем только проверенные бренды. Гарантия от 1 года.</p>
+    <h2>📦 Каталог оборудования</h2>
+    <p>Популярные модели. Цены указаны в у.е. (оплата в сумах по курсу ЦБ).<br>Полный прайс-лист высылаем по запросу.</p>
 
     <!-- HIKVISION -->
-    <h3 class="product-section-title">Hikvision</h3>
+    <h3 class="product-section-title">HIKVISION (Лидер продаж)</h3>
     <div class="products-grid">
         <div class="product-card">
-            <!-- Заглушка. Загрузи фото и поменяй src="hik1.jpg" -->
-            <div class="product-img-placeholder">📸 Фото камеры</div>
-            <div class="product-title">Hikvision IP 4MP</div>
-            <div class="product-desc">Уличная камера, ночная съемка 30м, микрофон.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">DS-2CD1023G0E-I</div>
+            <div class="product-desc">IP камера 2 МП, уличная. ИК подсветка 30м. Надежная "рабочая лошадка".</div>
+            <div class="product-price">$ 27.30</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
         <div class="product-card">
-            <div class="product-img-placeholder">📸 Фото камеры</div>
-            <div class="product-title">Hikvision ColorVu</div>
-            <div class="product-desc">Цветное изображение 24/7, LED подсветка.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">DS-2CD1027G2-L</div>
+            <div class="product-desc">ColorVu Lite. Цветное изображение ночью! 2 МП, встроенный микрофон.</div>
+            <div class="product-price">$ 43.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
         <div class="product-card">
-            <div class="product-img-placeholder">📸 Фото домофона</div>
-            <div class="product-title">Видеодомофон Hikvision</div>
-            <div class="product-desc">Экран 7 дюймов, WiFi, открытие с телефона.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">DS-2CD2421G0-I</div>
+            <div class="product-desc">Офисная Cube камера. Двусторонняя аудиосвязь, датчик движения.</div>
+            <div class="product-price">$ 38.50</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
+        </div>
+        <div class="product-card">
+            <div class="product-img-placeholder">📸 Фото NVR</div>
+            <div class="product-title">DS-7604NI-K1</div>
+            <div class="product-desc">NVR видеорегистратор на 4 канала. Поддержка 4K, Hik-Connect.</div>
+            <div class="product-price">$ 56.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
     </div>
 
     <!-- TIANDY -->
-    <h3 class="product-section-title">Tiandy</h3>
+    <h3 class="product-section-title">TIANDY (Цена / Качество)</h3>
     <div class="products-grid">
         <div class="product-card">
-            <div class="product-img-placeholder">📸 Фото камеры</div>
-            <div class="product-title">Tiandy Starlight</div>
-            <div class="product-desc">Высокая чувствительность в темноте. Металлический корпус.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">TC-C321N</div>
+            <div class="product-desc">Бюджетная IP камера 2 МП. Металл+пластик. Микрофон, PoE.</div>
+            <div class="product-price">$ 26.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
+        </div>
+        <div class="product-card">
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">TC-C32QN (Color)</div>
+            <div class="product-desc">Color Maker. 2 МП, 2 белые лампы подсветки. Полноцветная ночь.</div>
+            <div class="product-price">$ 34.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
         <div class="product-card">
             <div class="product-img-placeholder">📸 Фото PTZ</div>
-            <div class="product-title">Tiandy PTZ SpeedDome</div>
-            <div class="product-desc">Поворотная камера 25x зум, автослежение.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-title">TC-H334S WiFi</div>
+            <div class="product-desc">Поворотная WiFi камера. Слежение за объектом, микрофон+динамик.</div>
+            <div class="product-price">$ 58.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
+        </div>
+        <div class="product-card">
+            <div class="product-img-placeholder">📸 Фото NVR</div>
+            <div class="product-title">Tiandy NVR 10-ch</div>
+            <div class="product-desc">Сетевой регистратор TC-R3110. До 10 каналов, поддержка аналитики.</div>
+            <div class="product-price">~ $ 60.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
     </div>
 
     <!-- UNV -->
-    <h3 class="product-section-title">UNV (Uniview)</h3>
+    <h3 class="product-section-title">UNV (Профессиональные решения)</h3>
     <div class="products-grid">
         <div class="product-card">
-            <div class="product-img-placeholder">📸 Фото NVR</div>
-            <div class="product-title">NVR UNV 8 каналов</div>
-            <div class="product-desc">Запись 4K, поддержка облака, Smart аналитика.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">IPC2122LB-ADF28KM</div>
+            <div class="product-desc">2 МП Easystar. Отличная ночная съемка, встроенный микрофон, металл.</div>
+            <div class="product-price">$ 32.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
         <div class="product-card">
-            <div class="product-img-placeholder">📸 Фото камеры</div>
+            <div class="product-img-placeholder">📸 Фото</div>
+            <div class="product-title">IPC3612LE-ADF28K</div>
+            <div class="product-desc">Купольная 2 МП камера (Dome). Идеально для помещений и коридоров.</div>
+            <div class="product-price">$ 30.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
+        </div>
+        <div class="product-card">
+            <div class="product-img-placeholder">📸 Фото</div>
             <div class="product-title">UNV Tri-Guard</div>
-            <div class="product-desc">Активное отпугивание (звук/свет), двусторонняя связь.</div>
-            <a href="#contacts" class="btn-small">Узнать цену</a>
+            <div class="product-desc">Активное отпугивание: Сирена + Стробоскоп при обнаружении.</div>
+            <div class="product-price">$ 55.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
+        </div>
+        <div class="product-card">
+            <div class="product-img-placeholder">📸 Фото NVR</div>
+            <div class="product-title">NVR301-04LS3-P4</div>
+            <div class="product-desc">4-канальный NVR со встроенным PoE свитчем (питание по кабелю).</div>
+            <div class="product-price">$ 65.00</div>
+            <a href="#contacts" class="btn-small">Заказать</a>
         </div>
     </div>
 
+    <div style="margin-top: 40px;">
+        <a href="https://t.me/watchpointcctv24" class="btn" style="background: #333; border: 1px solid #555;">📥 Запросить полный прайс-лист в PDF</a>
+    </div>
   </section>
 
-  <!-- PRICES -->
+  <!-- PRICES (ЦЕНЫ УСЛУГ) -->
   <section id="prices" class="reveal" style="background: #0f121b;">
-    <h2>💰 Цены на услуги</h2>
+    <h2>💰 Стоимость монтажа</h2>
     <p>Прозрачные цены без скрытых доплат. Работаем за наличный и безналичный расчет.</p>
 
     <div class="price-container">
@@ -410,7 +454,7 @@
           </li>
           <li>
             <span>Восстановление пароля NVR</span>
-            <strong>100 000 сум</strong>
+            <strong>150 000 сум</strong>
           </li>
           <li>
             <span>Проектирование системы</span>
@@ -531,7 +575,7 @@
           }
         }
       });
-    }, {threshold:0.3}); // Чуть уменьшил порог для лучшей реакции на мобильных
+    }, {threshold:0.3});
     sections.forEach(sec=>secObs.observe(sec));
 
     // Кнопка наверх
@@ -559,5 +603,3 @@
 
 </body>
 </html>
-
-
