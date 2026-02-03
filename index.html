@@ -46,11 +46,11 @@
       position:fixed; top:0; left:0; right:0; height:64px;
       background:rgba(14,14,14,.95);
       backdrop-filter:blur(10px);
-      display:flex; align-items:center; justify-content:center; gap:28px;
+      display:flex; align-items:center; justify-content:center; gap:20px;
       z-index:1000;
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:.3s; font-size: 1.1rem;}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:.3s; font-size: 1.05rem;}
     nav a:hover{color:var(--text)}
     nav a.active{color:var(--active); position:relative}
     nav a.active::after{
@@ -85,18 +85,54 @@
     section h2{font-size:2.2rem; margin:0 0 20px; color: var(--active);}
     section p{max-width:880px; margin:0 auto 28px; line-height:1.65; font-size:1.1rem}
 
-    /* SERVICES */
-    .services{display:flex; flex-wrap:wrap; justify-content:center; gap:25px}
-    .card{
-      width:280px; background:var(--panel); border-radius:16px; padding:25px;
+    /* SERVICES & PRICES GRID */
+    .services, .price-container {display:flex; flex-wrap:wrap; justify-content:center; gap:25px}
+    
+    .card, .price-card {
+      width:280px; background:var(--panel); border-radius:16px; 
       text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
       transition:transform .3s, box-shadow .3s, background .3s;
       opacity:0; transform:translateY(30px);
       border: 1px solid rgba(255,255,255,0.05);
+      overflow: hidden; /* Важно для закругления */
     }
-    .card.show{opacity:1; transform:none; transition:all .6s ease;}
-    .card:hover{transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,.4); background:#1e2330; border-color: var(--brand);}
+    /* Специфика карточки услуг */
+    .card { padding: 25px; }
+    
+    .card.show, .price-card.show {opacity:1; transform:none; transition:all .6s ease;}
+    
+    .card:hover, .price-card:hover {
+      transform:translateY(-8px); 
+      box-shadow:0 15px 30px rgba(0,0,0,.4); 
+      background:#1e2330; 
+      border-color: var(--brand);
+    }
     .card h3{margin:10px 0; color: var(--brand);}
+
+    /* PRICES SPECIFIC STYLES */
+    .price-card { width: 320px; display: flex; flex-direction: column; }
+    .price-header {
+      background: linear-gradient(135deg, var(--brand), #0056b3);
+      padding: 20px; font-size: 1.3rem; font-weight: bold; color: #fff; text-align: center;
+    }
+    .price-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .price-list li {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.95rem; text-align: left;
+    }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list li span { color: #ccc; max-width: 60%; }
+    .price-list li strong { color: var(--active); font-size: 1rem; text-align: right;}
+    
+    .btn-small {
+      display: block; text-align: center; padding: 12px; margin: 20px;
+      background: rgba(255,255,255,0.1); color: #fff; text-decoration: none;
+      border-radius: 8px; transition: .3s; font-weight: 600;
+    }
+    .btn-small:hover { background: var(--active); color: #000; }
 
     /* REVIEWS STYLES */
     .reviews-grid {
@@ -136,7 +172,7 @@
     footer{padding:30px; text-align:center; background:#05070a; color: #777; font-size: 0.9rem;}
 
     /* Anchor Offset */
-    #about, #services, #contacts, #reviews { scroll-margin-top: 80px; }
+    #about, #services, #contacts, #reviews, #prices { scroll-margin-top: 80px; }
 
     /* Button To Top */
     #toTop{
@@ -150,7 +186,7 @@
     @media (max-width: 600px) {
         header h1 { font-size: 2.2rem; }
         nav { gap: 15px; }
-        nav a { font-size: 0.95rem; }
+        nav a { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -160,6 +196,7 @@
   <nav>
     <a href="#about">О нас</a>
     <a href="#services">Услуги</a>
+    <a href="#prices">Цены</a>
     <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
   </nav>
@@ -213,8 +250,103 @@
     </div>
   </section>
 
+  <!-- PRICES (ЦЕНЫ) -->
+  <section id="prices" class="reveal">
+    <h2>💰 Цены на услуги</h2>
+    <p>Прозрачные цены без скрытых доплат. Работаем за наличный и безналичный расчет.</p>
+
+    <div class="price-container">
+      
+      <!-- Колонка 1: Видеонаблюдение -->
+      <div class="price-card">
+        <div class="price-header">📹 Видеонаблюдение</div>
+        <ul class="price-list">
+          <li>
+            <span>Монтаж камеры (до 3 м)</span>
+            <strong>от 150 000 сум</strong>
+          </li>
+          <li>
+            <span>Монтаж камеры (выше 3 м)</span>
+            <strong>от 200 000 сум</strong>
+          </li>
+          <li>
+            <span>Настройка доступа на телефон</span>
+            <strong>100 000 сум</strong>
+          </li>
+          <li>
+            <span>Прокладка кабеля (за метр)</span>
+            <strong>3 000 сум</strong>
+          </li>
+          <li>
+            <span>Монтаж видеорегистратора</span>
+            <strong>250 000 сум</strong>
+          </li>
+        </ul>
+        <a href="#contacts" class="btn-small">Заказать</a>
+      </div>
+
+      <!-- Колонка 2: СКУД и Домофоны -->
+      <div class="price-card">
+        <div class="price-header">🔐 СКУД и Домофоны</div>
+        <ul class="price-list">
+          <li>
+            <span>Установка видеодомофона</span>
+            <strong>450 000 сум</strong>
+          </li>
+          <li>
+            <span>Монтаж электрозамка</span>
+            <strong>350 000 сум</strong>
+          </li>
+          <li>
+            <span>Установка турникета</span>
+            <strong>от 1 500 000 сум</strong>
+          </li>
+          <li>
+            <span>Настройка Face ID / Отпечатка</span>
+            <strong>от 200 000 сум</strong>
+          </li>
+          <li>
+            <span>Монтаж доводчика двери</span>
+            <strong>150 000 сум</strong>
+          </li>
+        </ul>
+        <a href="#contacts" class="btn-small">Заказать</a>
+      </div>
+
+      <!-- Колонка 3: Сервис и Проектирование -->
+      <div class="price-card">
+        <div class="price-header">🛠 Сервис и Проекты</div>
+        <ul class="price-list">
+          <li>
+            <span>Выезд на диагностику</span>
+            <strong>100 000 сум</strong>
+          </li>
+          <li>
+            <span>Восстановление пароля NVR</span>
+            <strong>150 000 сум</strong>
+          </li>
+          <li>
+            <span>Проектирование системы</span>
+            <strong>БЕСПЛАТНО*</strong>
+          </li>
+          <li>
+            <span>Смета (расчет стоимости)</span>
+            <strong>БЕСПЛАТНО</strong>
+          </li>
+          <li>
+            <span>Перенос камер (демонтаж)</span>
+            <strong>от 200 000 сум</strong>
+          </li>
+        </ul>
+        <a href="#contacts" class="btn-small">Заказать</a>
+      </div>
+
+    </div>
+    <p style="font-size: 0.9rem; color: #777; margin-top: 20px;">*При заказе монтажа у нас.</p>
+  </section>
+
   <!-- REVIEWS -->
-  <section id="reviews" class="reveal">
+  <section id="reviews" class="reveal" style="background:#0e1118;">
     <h2>⭐ Отзывы клиентов</h2>
     <p>Нам доверяют безопасность своего бизнеса и дома.</p>
     
@@ -258,7 +390,7 @@
   </section>
 
   <!-- CONTACTS -->
-  <section id="contacts" class="reveal" style="background:#0e1118;">
+  <section id="contacts" class="reveal">
     <h2>📞 Свяжитесь с нами</h2>
     <p>📍 Ташкент, Узбекистан. Выезд по всей Республике.</p>
     <p>Работаем как с частными лицами, так и с организациями (перечисление).</p>
@@ -287,7 +419,7 @@
 
   <script>
     // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card, .review-card');
+    const reveals = document.querySelectorAll('.reveal, .card, .review-card, .price-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -340,11 +472,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
