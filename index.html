@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>WatchPoint Security — Видеонаблюдение, СКУД и смарт-замки в Узбекистане</title>
-  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, умных замков Lenios, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, Lenios, UniFi, UNV.">
-  <meta name="keywords" content="видеонаблюдение, смарт замки, умные замки, Lenios, системы безопасности, монтаж камер, контроль доступа, СКУД, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
+  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, умных замков Jaify, СКУД и ИТ-инфраструктуры в Ташкенте. Интегратор Hikvision, Tiandy, Jaify, UniFi, UNV.">
+  <meta name="keywords" content="видеонаблюдение, смарт замки, умные замки, Jaify, системы безопасности, монтаж камер, контроль доступа, СКУД, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
-  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Умные замки, биометрия, готовые комплекты оборудования под ключ и официальный договор.">
+  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Умные замки, биометрия, облачные камеры, готовые комплекты оборудования под ключ и официальный договор.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
   <meta property="og:image" content="slide1.png.png">
@@ -42,11 +42,13 @@
       position: fixed; top: 0; left: 0; right: 0; height: 64px;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center; gap: 20px;
+      display: flex; align-items: center; justify-content: center; gap: 18px;
       z-index: 1000;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      flex-wrap: wrap;
+      padding: 0 10px;
     }
-    nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: .3s; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: .3s; }
     nav a:hover { color: var(--brand); }
     nav a.active { color: var(--brand); position: relative; }
     nav a.active::after {
@@ -88,12 +90,10 @@
     .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 3px 20px rgba(0,0,0,0.85); }
     .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.85); }
 
-    /* Стрелочки убраны */
     .slide-arrow {
       display: none !important;
     }
 
-    /* Точки */
     .slider-dots {
       position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%);
       display: flex; gap: 10px; z-index: 10;
@@ -142,31 +142,31 @@
     .brand-tags { font-size: 0.8rem; font-weight: 700; color: var(--brand); margin-bottom: 12px; letter-spacing: 0.5px; }
     .price-tag { font-size: 1.1rem; font-weight: 700; color: var(--active); border-top: 1px solid rgba(0,0,0,0.06); padding-top: 12px; }
 
-    /* LENIOS LOCKS SECTION STYLES */
-    .lenios-unlock-grid {
+    /* SMART LOCKS SECTION STYLES */
+    .lock-unlock-grid {
       display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 0 auto 40px;
     }
-    .lenios-unlock-card {
+    .lock-unlock-card {
       flex: 1 1 180px; max-width: 200px; background: var(--panel); border-radius: 14px; padding: 22px 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); text-align: center;
       transition: transform 0.25s;
     }
-    .lenios-unlock-card:hover { transform: translateY(-4px); }
-    .lenios-icon { font-size: 2.2rem; margin-bottom: 10px; }
-    .lenios-unlock-card h4 { font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px; }
-    .lenios-unlock-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+    .lock-unlock-card:hover { transform: translateY(-4px); }
+    .lock-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .lock-unlock-card h4 { font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px; }
+    .lock-unlock-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
 
-    .lenios-features-box {
+    .lock-features-box {
       max-width: 1100px; margin: 0 auto 35px; background: var(--panel); border-radius: 16px; padding: 30px;
       text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-left: 4px solid var(--active);
     }
-    .lenios-features-box h3 { font-size: 1.25rem; color: #0a0f1e; margin-bottom: 18px; text-align: center; }
-    .lenios-features-list {
+    .lock-features-box h3 { font-size: 1.25rem; color: #0a0f1e; margin-bottom: 18px; text-align: center; }
+    .lock-features-list {
       list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;
     }
-    .lenios-features-list li { font-size: 0.95rem; color: var(--muted); line-height: 1.5; display: flex; align-items: start; gap: 8px; }
-    .lenios-features-list li strong { color: #0a0f1e; }
-    .lenios-features-list li::before { content: '✔'; color: var(--active); font-weight: bold; flex-shrink: 0; }
+    .lock-features-list li { font-size: 0.95rem; color: var(--muted); line-height: 1.5; display: flex; align-items: start; gap: 8px; }
+    .lock-features-list li strong { color: #0a0f1e; }
+    .lock-features-list li::before { content: '✔'; color: var(--active); font-weight: bold; flex-shrink: 0; }
 
     /* BUNDLES */
     .bundles-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px; max-width: 1200px; margin: 0 auto; }
@@ -283,10 +283,11 @@
     .seo-text-block p { margin-bottom: 10px; }
 
     footer { padding: 30px; text-align: center; background: #ffffff !important; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
-    #about, #features, #standards, #services, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #standards, #services, #jaify-partner, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    section#features, section#services, section#projects, section#faq { background-color: #ffffff !important; }
-    section#about, section#standards, section#smart-locks, section#bundles, section#reviews, section#contacts { background-color: #f4f7fc !important; }
+    /* ЧЕРЕДОВАНИЕ ФОНОВ СЕКЦИЙ */
+    section#features, section#services, section#smart-locks, section#projects, section#faq { background-color: #ffffff !important; }
+    section#about, section#standards, section#jaify-partner, section#bundles, section#reviews, section#contacts { background-color: #f4f7fc !important; }
 
     #toTop {
       position: fixed; right: 18px; bottom: 18px; width: 50px; height: 50px; border-radius: 14px;
@@ -303,6 +304,7 @@
     <a href="#features">Преимущества</a>
     <a href="#standards">Стандарты</a>
     <a href="#services">Услуги</a>
+    <a href="#jaify-partner">Jaify 2026</a>
     <a href="#smart-locks">Смарт-замки</a>
     <a href="#bundles">Комплекты</a>
     <a href="#projects">Проекты</a>
@@ -350,7 +352,7 @@
   <section id="about">
     <h2>🔎 О компании</h2>
     <p class="section-desc">
-      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан.
+      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан. С 2026 года мы начали сотрудничество с международным разработчиком IoT-систем <strong>Jaify Tech</strong>, расширяя линейку умных облачных камер и электронных замков.
     </p>
   </section>
 
@@ -368,7 +370,7 @@
       </div>
       <div class="feature-item">
         <h3>💡 Сертифицированные бренды</h3>
-        <p>Работаем только с официальным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем с стабильностью связи.</p>
+        <p>Работаем только с проверенным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем со стабильностью связи.</p>
       </div>
     </div>
   </section>
@@ -401,13 +403,13 @@
     <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
     <div class="services">
       <div class="card">
-        <div class="brand-tags">HIKVISION / TIANDY / UNV</div>
+        <div class="brand-tags">HIKVISION / TIANDY / UNV / JAIFY</div>
         <h3>📹 Видеонаблюдение</h3>
-        <p>Проектирование IP-систем, установка умных камер (ColorVu, купольные, PTZ), настройка видеорегистраторов (NVR), удалённого доступа на смартфонах и видеоаналитики.</p>
+        <p>Проектирование IP-систем и облачных Wi-Fi/4G камер, установка умных камер (ColorVu, купольные, PTZ, двухобъективные), настройка регистраторов (NVR) и видеоаналитики.</p>
         <div class="price-tag">от 1 200 000 сум</div>
       </div>
       <div class="card">
-        <div class="brand-tags">LENIOS / TUYA / TTLOCK</div>
+        <div class="brand-tags">JAIFY / TUYA / TTLOCK</div>
         <h3>🔐 Умные смарт-замки</h3>
         <p>Установка биометрических электронных замков для квартир, коттеджей и офисов. Открытие по Face ID, отпечатку пальца, ПИН-коду и через смартфон.</p>
         <div class="price-tag">от 1 800 000 сум</div>
@@ -427,48 +429,103 @@
     </div>
   </section>
 
-  <!-- SECTION: LENIOS SMART LOCKS WITH GALLERY & SPECS -->
+  <!-- СЕКЦИЯ ПАРТНЕРСТВА С JAIFY TECH (С 2026 ГОДА) -->
+  <section id="jaify-partner">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: left;">
+      
+      <div style="text-align: center; margin-bottom: 45px;">
+        <span style="background: rgba(0,184,135,0.12); color: var(--active); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Новое направление • С 2026 года</span>
+        <h2 style="margin-top: 12px;">Сотрудничество с Jaify Tech</h2>
+        <p class="section-desc" style="margin-bottom: 0;">
+          С 2026 года <strong>WatchPoint Security</strong> начала сотрудничество с международным разработчиком умных систем безопасности <strong>Zhejiang JAIFY Co., Ltd.</strong> Теперь в наших проектах доступны современные облачные камеры и умные замки этого бренда.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px;">
+        
+        <div style="background: var(--panel); padding: 30px; border-radius: 16px; border-top: 4px solid var(--brand); box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;">☁️ Надежная облачная платформа</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+            Jaify развивает собственную R&D-базу (3 научно-исследовательских центра) и использует глобальные облачные серверы (AWS, Google Cloud), обеспечивая стабильную работу более чем для 100 млн зарегистрированных пользователей по всему миру.
+          </p>
+          <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 0.92rem;">
+            <li style="margin-bottom: 8px;">✔ Стабильный удаленный доступ без зависаний из любой точки мира</li>
+            <li style="margin-bottom: 8px;">✔ Защищенное хранение видеоархива в облаке и на карте TF до 256 Гб</li>
+            <li>✔ Мгновенные тревожные пуш-уведомления на смартфон (iOS / Android)</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--panel); padding: 30px; border-radius: 16px; border-top: 4px solid var(--active); box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;">🧠 Умное зрение и Сценарный ИИ</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+            Оборудование оснащено встроенными алгоритмами искусственного интеллекта под конкретные задачи охраны дома, семьи и бизнеса:
+          </p>
+          <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 0.92rem;">
+            <li style="margin-bottom: 8px;">✔ <strong>Контроль периметра (Outdoor):</strong> распознавание людей, машин, животных и раннее обнаружение огня</li>
+            <li style="margin-bottom: 8px;">✔ <strong>Забота о близких (Elderly/Child Care):</strong> детекция падений пожилых людей и контроль опасных зон для детей</li>
+            <li style="margin-bottom: 8px;">✔ <strong>Контроль персонала (Job Inspection):</strong> фиксация присутствия на рабочем месте</li>
+            <li>✔ <strong>Технология AOV и 2 объектива:</strong> непрерывная запись 24/7 без слепых зон с кодеком H.265</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="background: #0a0f1e; color: #ffffff; padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(10,15,30,0.15);">
+        <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Камеры и смарт-замки Jaify для ваших задач</h3>
+        <p style="color: #cbd5e0; font-size: 1rem; max-width: 720px; margin: 0 auto 25px; line-height: 1.6;">
+          Подберем и установим внутренние поворотные (Pan&Tilt) камеры с двусторонней аудиосвязью, уличные Wi-Fi и 4G камеры с защитой от погоды IP66/IP67, а также современные электронные замки Jaify с управлением со смартфона.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="max-width: 260px !important;">Подобрать камеры Jaify</a>
+          <a href="#smart-locks" class="contact-button cb-phone" style="max-width: 260px !important;">Умные замки</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: SMART LOCKS WITH GALLERY & SPECS -->
   <section id="smart-locks">
-    <h2>🔐 Умные замки Lenios Tech — Безопасность без ключей</h2>
+    <h2>🔐 Умные замки Jaify — Безопасность без ключей</h2>
     <p class="section-desc">
-      Интегрируем в наши проекты интеллектуальные электронные замки от ведущего мирового производителя <strong>Lenios Tech</strong> (30+ лет опыта в технологиях безопасности). Идеальное решение для квартир, частных домов, офисов и коммерческой недвижимости.
+      Интегрируем в наши проекты интеллектуальные электронные замки от <strong>Jaify Tech</strong>. Идеальное решение для квартир, частных домов, офисов и коммерческой недвижимости.
     </p>
 
-    <div class="lenios-unlock-grid">
-      <div class="lenios-unlock-card">
-        <div class="lenios-icon">👤</div>
+    <div class="lock-unlock-grid">
+      <div class="lock-unlock-card">
+        <div class="lock-icon">👤</div>
         <h4>Face ID</h4>
         <p>Распознавание лиц за 0.3 секунды без прикосновений</p>
       </div>
 
-      <div class="lenios-unlock-card">
-        <div class="lenios-icon">👆</div>
+      <div class="lock-unlock-card">
+        <div class="lock-icon">👆</div>
         <h4>Отпечаток</h4>
         <p>Быстрый сканер биометрии прямо на ручке замка</p>
       </div>
 
-      <div class="lenios-unlock-card">
-        <div class="lenios-icon">📱</div>
+      <div class="lock-unlock-card">
+        <div class="lock-icon">📱</div>
         <h4>Смартфон</h4>
         <p>Удаленный доступ и временные ключи через App</p>
       </div>
 
-      <div class="lenios-unlock-card">
-        <div class="lenios-icon">🔢</div>
+      <div class="lock-unlock-card">
+        <div class="lock-icon">🔢</div>
         <h4>ПИН & Карты</h4>
         <p>Удобный доступ по коду или RFID-карте для всей семьи</p>
       </div>
 
-      <div class="lenios-unlock-card">
-        <div class="lenios-icon">🔑</div>
+      <div class="lock-unlock-card">
+        <div class="lock-icon">🔑</div>
         <h4>Аварийный ключ</h4>
         <p>Механический ключ на случай полного разряда батареи</p>
       </div>
     </div>
 
-    <div class="lenios-features-box">
-      <h3>Почему мы устанавливаем замки Lenios в наших проектах:</h3>
-      <ul class="lenios-features-list">
+    <div class="lock-features-box">
+      <h3>Почему мы устанавливаем современные смарт-замки в наших проектах:</h3>
+      <ul class="lock-features-list">
         <li><strong>Прочный корпус:</strong> Корпус из высокопрочных сплавов (Aluminium Alloy) и усиленные врезные механизмы.</li>
         <li><strong>Встроенный видеодомофон:</strong> Трансляция изображения гостя прямо на экран вашего смартфона.</li>
         <li><strong>Полная автономность:</strong> Емкие аккумуляторы обеспечивают работу даже при отключении электричества.</li>
@@ -482,23 +539,23 @@
       
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px;">
         
-        <div style="flex: 1 1 280px; max-width: 340px; background: var(--panel); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
-          <img src="lock1.jpg.jpg" alt="Умный замок Lenios" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+        <div style="flex: 1 1 280px; max-width: 340px; background: var(--bg); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
+          <img src="lock1.jpg.jpg" alt="Умный замок" style="width: 100%; height: 240px; object-fit: cover; display: block;">
           <div style="padding: 15px;">
             <h4 style="font-size: 1rem; color: #0a0f1e; margin-bottom: 5px;">Флагманские биометрические серии</h4>
             <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">Замки с Face ID, отпечатком пальцев, венозным сканером ладони и экраном.</p>
           </div>
         </div>
 
-        <div style="flex: 1 1 280px; max-width: 340px; background: var(--panel); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
+        <div style="flex: 1 1 280px; max-width: 340px; background: var(--bg); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
           <img src="lock2.jpg.jpg" alt="Электронный контроль доступа" style="width: 100%; height: 240px; object-fit: cover; display: block;">
           <div style="padding: 15px;">
-            <h4 style="font-size: 1rem; color: #0a0f1e; margin-bottom: 5px;">Управление со смартфона (Tuya/TTlock)</h4>
+            <h4 style="font-size: 1rem; color: #0a0f1e; margin-bottom: 5px;">Управление со смартфона (Jaify / Tuya / TTlock)</h4>
             <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">Интеграция с Wi-Fi для дистанционного открытия двери, генерации временных паролей и просмотра логов.</p>
           </div>
         </div>
 
-        <div style="flex: 1 1 280px; max-width: 340px; background: var(--panel); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
+        <div style="flex: 1 1 280px; max-width: 340px; background: var(--bg); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
           <img src="lock3.jpg.jpg" alt="Монтаж электронных замков" style="width: 100%; height: 240px; object-fit: cover; display: block;">
           <div style="padding: 15px;">
             <h4 style="font-size: 1rem; color: #0a0f1e; margin-bottom: 5px;">Универсальные врезные механизмы</h4>
@@ -509,8 +566,8 @@
       </div>
 
       <!-- TECHNICAL SPECS BOX -->
-      <div style="background: var(--panel); border-radius: 16px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
-        <h4 style="font-size: 1.15rem; color: #0a0f1e; margin-bottom: 15px; border-bottom: 2px solid var(--brand); padding-bottom: 8px;">⚙️ Технические характеристики и принцип работы замков Lenios:</h4>
+      <div style="background: var(--bg); border-radius: 16px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); text-align: left;">
+        <h4 style="font-size: 1.15rem; color: #0a0f1e; margin-bottom: 15px; border-bottom: 2px solid var(--brand); padding-bottom: 8px;">⚙️ Технические характеристики и принцип работы смарт-замков:</h4>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
           <div>
@@ -522,7 +579,7 @@
           <div>
             <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 8px;">🔹 <strong>Врезной механизм (Mortise):</strong> Усиленный стандартов 6068, 5050, 502, 504, 510 с защитой от спиливания</p>
             <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 8px;">🔹 <strong>Память биометрии:</strong> До 50-100 лиц (Face ID), 100 отпечатков пальцев, 100 ПИН-кодов и 100 RFID-карт</p>
-            <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 8px;">🔹 <strong>Приложение и Сеть:</strong> Встроенный Wi-Fi / Bluetooth модуль для управления через Tuya Smart / TTLock</p>
+            <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 8px;">🔹 <strong>Приложение и Сеть:</strong> Встроенный Wi-Fi / Bluetooth модуль для управления через Jaify / Tuya Smart / TTLock</p>
             <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 8px;">🔹 <strong>Аварийное открытие:</strong> Разъем Type-C / Micro-USB для внешнего питания (PowerBank) + физический ключ</p>
           </div>
         </div>
@@ -722,8 +779,8 @@
 
     <div class="seo-text-block">
       <h4>Профессиональное проектирование и монтаж систем безопасности в Узбекистане</h4>
-      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, умных электронных смарт-замков, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
-      <p>Благодаря статусу официального интегратора передового оборудования от брендов мирового уровня — <strong>Hikvision, Tiandy, Lenios, UNV (Uniview) и UniFi</strong> — мы гарантируем бескомпромиссную отказоустойчивость систем. Обслуживание объектов коммерческой недвижимости, складов, производственных предприятий и частных загородных резиденций производится строго по договору по перечислению (с НДС), с предоставлением полной гарантии 1 год.</p>
+      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, облачных Wi-Fi/4G камер, умных электронных смарт-замков, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
+      <p>Мы работаем с передовым оборудованием от брендов мирового уровня — <strong>Hikvision, Tiandy, Jaify (сотрудничество с 2026 года), UNV (Uniview) и UniFi</strong> — гарантируя бескомпромиссную отказоустойчивость систем. Обслуживание объектов коммерческой недвижимости, складов, производственных предприятий и частных загородных резиденций производится строго по договору по перечислению (с НДС), с предоставлением полной гарантии 1 год.</p>
     </div>
   </section>
 
